@@ -4,8 +4,8 @@
 </p>
 
 <div data-behaviour='messages'>
-  <% 1.upto(100) do %>
-    <div class=""><strong>ggomersall:</strong> Hello</div>
+  <% @messages.each do |message| %>
+    <div><strong><%= message.user.username %>:</strong> <%= message.body %></div>
   <% end %>
 </div>
 
