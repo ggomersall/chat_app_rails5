@@ -9,6 +9,8 @@ class ChatroomUsersController < ApplicationController
   end
 
   def destroy
+  # destroy_all destroys associated records of a chat room for current user
+  # also prevents app crashing by not having to find id and associations
     @chatroom_user = @chatroom.chatroom_users.where(user_id: current_user.id).destroy_all
     redirect_to chatrooms_path
   end
