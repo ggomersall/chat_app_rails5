@@ -9,4 +9,8 @@ class ChatroomsChannel < ApplicationCable::Channel
   def unsubscribed
     stop_all_streams
   end
+
+  def send_message(data)
+    Rails.logger.info data
+  end
 end
