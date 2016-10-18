@@ -12,3 +12,5 @@ $(document).on "turbolinks:load", ->
     body        = $("#message_body")
 
     App.chatrooms.send_message(chatroom_id, body.val())
+
+    body.val(" ")
